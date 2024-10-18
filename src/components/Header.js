@@ -37,7 +37,7 @@ const Header = () => {
                 <AiOutlineUser className='icons-size' />
                 My-Profile
               </span>
-              <span className='cart cart-length-update'>
+              <span className='cart cart-length-update' data-cart-length="3">
             <HiOutlineShoppingCart className='icons-size'/>
                 Cart
               </span>
