@@ -1,7 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Caveat:wght@400;700&family=Lobster&family=Monoton&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display+SC:ital,wght@0,400;0,700;1,700&family=Playfair+Display:ital,wght@0,400;0,700;1,700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&family=Source+Sans+Pro:ital,wght@0,400;0,700;1,700&family=Work+Sans:ital,wght@0,400;0,700;1,700&display=swap');
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    'Ubuntu', 'Cantarell','Poppins', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -10,4 +12,117 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+
+.header{
+  width: 1366px;
+  height: 97px;
+  top: 33px;
+  left: 3px;
+  gap: 0px;
+  opacity: 0px;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+.top{
+  width: 100vw;
+  height: 47px;
+  top: 33px;
+  background-color:#165315;
+  left: -37px;
+  display: flex;
+  justify-content: end;
+  
+ 
+}
+
+.text{
+  font-family: Inter;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 16.94px; 
+  color: aliceblue;
+  margin-left: 390px;
+ 
+}
+
+.logo-container{
+width: 213px;
+height: 61px;
+margin-top: 38px;
+margin-left: 53px;
+gap: 0px;
+opacity: 0px;
+display: flex;
+
+}
+
+.logo{
+  width: 60px;
+height: 61px;
+top: 58px;
+left: 53px;
+gap: 0px;
+opacity: 0px;
+
+}
+
+.logo-text{
+  font-family: Poppins;
+font-size: 25px;
+font-weight: 600;
+line-height: 26px;
+text-align: left;
+margin-left: 10px;
+
+}
+
+.nav-container{
+  list-style-type: none;
+  display: flex;
+  justify-content: start;
+  margin-top: 55px;
+}
+
+.nav-container > li{
+  margin-left: 25px;
+  font-family: Poppins;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  text-align: left;
+  font-weight: bold;
+  font-family: Poppins;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.nav-container>li:hover{
+  color:  #F3A939;
+  text-decoration: underline;
+}
+
+
+.right-section{
+  
+  margin-left: 254px;
+  margin-top: 35px;
+  display: flex;
+}
+
+.profile-and-cart{
+  display: flex;
+  flex-direction:column;
+  justify-content: center;
+  align-items: center;
+  margin-left: 40px;
+}
+
+.icons-size{
+  
+  font-size:30px;
 }
