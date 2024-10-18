@@ -32,21 +32,16 @@ const Header = () => {
 
 
         {/*My profile and Cart Section */}
-    
-        
-            <div className='right-section'>
-            <span className='profile-and-cart' >
+        <div className='right-section'>
+              <span className='profile' >
                 <AiOutlineUser className='icons-size' />
                 My-Profile
-            </span>
-            <span className='profile-and-cart'>
+              </span>
+              <span className='cart cart-length-update'>
             <HiOutlineShoppingCart className='icons-size'/>
                 Cart
-            </span>
-            </div>
-        
-
-
+              </span>
+        </div>
     </div>
 </>
 
