@@ -2,13 +2,17 @@ import React from 'react'
 import { LOGO } from '../utils/constants'
 import { AiOutlineUser } from "react-icons/ai";
 import { HiOutlineShoppingCart } from 'react-icons/hi';
+import { IoIosArrowDown } from 'react-icons/io';
 
 const Header = () => {
   return (
-    <>        
+    <>    
+    <div className='main-container'>    
         <div className='top'>
-            <p className='text'>Free Shipping on orders above 999/-</p>
-            <p className='text'>Call us on: +91 98768 05120</p>
+            <div className='top-alignment'>
+                <p className='text'>Free Shipping on orders above 999/-</p>
+                <p className='text'>Call us on: +91 98768 05120</p>
+            </div>
         </div>
 
          {/* Nav Bar section */}
@@ -22,8 +26,8 @@ const Header = () => {
         <ul className='nav-container'>
             <li >Home</li>
             <li>Plants & Pots</li>
-            <li>Tools ⩡</li>
-            <li>Our Services ⩡</li>
+            <li>Tools <IoIosArrowDown  /></li>
+            <li>Our Services <IoIosArrowDown /></li>
             <li>Blog</li>
             <li>Our Story</li>
             <li>FAQS</li>
@@ -42,6 +46,7 @@ const Header = () => {
                 Cart
               </span>
         </div>
+    </div>
     </div>
 </>
 
