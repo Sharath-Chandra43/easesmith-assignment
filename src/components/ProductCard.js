@@ -2,15 +2,22 @@ import React, { useState } from 'react'
 import { FaRegHeart } from 'react-icons/fa';
 import AddToCartModal from './AddToCartModal';
 import { useNavigate } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import { openAddToCartModal } from '../utils/cartSlice';
 
 const ProductCard = ({product,index}) => {
   const {name,description,image,rating,totalPrice,discountedPrice,id}=product;
   const [showModal,setShowModal]=useState(false);
+  const dispatch = useDispatch();
   const navigate = useNavigate();
 
-  const handleAddToCart=()=>{
-    setShowModal(true);
-  }
+  const handleAddToCart = () => {
+    dispatch(openAddToCartModal(id));
+     // Dispatch action with product ID
+     setShowModal(true);
+  };
+
+
 
   const handleCloseModal=()=>{
     setShowModal(false)
@@ -59,9 +66,12 @@ const ProductCard = ({product,index}) => {
           </button>
         </div>
         {showModal &&
-        (
-          <AddToCartModal product={product}  key={`${product.id}`} isOpen={showModal} onConfirm={handleAddToCart} onClose={handleCloseModal} />
-          )        
+        <AddToCartModal
+        product={product}
+        key={id} // Ensure unique key based on product ID
+        isOpen={showModal}
+        onClose={handleCloseModal}
+      />  
        }
       </div>
   

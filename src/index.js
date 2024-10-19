@@ -6,6 +6,8 @@ import App from './App'; // Import your App component
 import Home from './components/Home'; // Import your Home component
 import ThankYouPage from './components/ThankYouPage'; // Import ThankYouPage component (optional)
 import { Cart } from './components/Cart';
+import { Provider } from 'react-redux';
+import appStore from './utils/appStore';
  // Import Cart component (optional)
 
 const appRouter = createBrowserRouter([
@@ -26,9 +28,11 @@ const appRouter = createBrowserRouter([
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
+    <Provider store={appStore} >
     <RouterProvider router={appRouter}>
       <App /> {/* Wrap your App component with RouterProvider */}
     </RouterProvider>
+    </Provider>
   </React.StrictMode>
 );
 
