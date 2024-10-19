@@ -1,16 +1,18 @@
 import React from 'react';
 
-const AddToCartModal = ({ product, onClose }) => {
-  const { name, description, image, price } = product;
+const AddToCartModal = ({ product, onClose,isOpen }) => {
+  const { name, description, image, discountedPrice } = product;
 
+  if (!isOpen) return null;
+  
   const handleConfirm = () => {
     // Replace with your actual logic to add the product to the cart
-    console.log(`Adding ${name} to cart`);
-    onClose();
+    console.log(`Adding ${name} to cart `);
+    
   };
 
   return (
-    <div className="modal" style={{ position: 'fixed', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', backgroundColor:'white' }}>
+    <div className="modal">
       <div className="modal-content">
         <div className="modal-header">
           <h2>Add to Cart</h2>
@@ -20,7 +22,7 @@ const AddToCartModal = ({ product, onClose }) => {
           <img src={image} alt={name} />
           <h3>{name}</h3>
           <p>{description}</p>
-          <p>Price: ₹{price}</p>
+          <p>Price: {discountedPrice}</p>
         </div>
         <div className="modal-footer">
           <button onClick={handleConfirm}>Confirm</button>

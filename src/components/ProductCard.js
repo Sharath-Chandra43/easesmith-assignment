@@ -1,14 +1,25 @@
 import React, { useState } from 'react'
 import { FaRegHeart } from 'react-icons/fa';
 import AddToCartModal from './AddToCartModal';
+import { useNavigate } from 'react-router-dom';
 
-const ProductCard = ({product}) => {
-  const {name,description,image,rating,totalPrice,discountedPrice}=product;
+const ProductCard = ({product,index}) => {
+  const {name,description,image,rating,totalPrice,discountedPrice,id}=product;
   const [showModal,setShowModal]=useState(false);
-
+  const navigate = useNavigate();
 
   const handleAddToCart=()=>{
     setShowModal(true);
+  }
+
+  const handleCloseModal=()=>{
+    setShowModal(false)
+  }
+
+
+
+  const handleViewProduct=()=>{
+    navigate('/thank-you',)
   }
 
   return (
@@ -18,7 +29,7 @@ const ProductCard = ({product}) => {
         <button className='heart-button'>
           <FaRegHeart size={22} />
         </button>
-        <button className='buttons view' >
+        <button className='buttons view' onClick={handleViewProduct} >
           View product
         </button>
       </div>
@@ -47,7 +58,11 @@ const ProductCard = ({product}) => {
             Buy on Rent
           </button>
         </div>
-        {showModal && <AddToCartModal product={product} onClose={() => setShowModal(false)} />}
+        {showModal &&
+        (
+          <AddToCartModal product={product}  key={`${index}-${product.id}`} isOpen={showModal} onConfirm={handleAddToCart} onClose={handleCloseModal} />
+          )        
+       }
       </div>
   
   )
