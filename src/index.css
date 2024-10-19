@@ -120,7 +120,6 @@ code {
 }
 
 .cart-length-update::after {
-  content: attr(data-cart-length);
   position: absolute;
   top: -18px;
   right: -18px;

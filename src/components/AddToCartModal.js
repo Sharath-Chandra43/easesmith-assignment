@@ -1,13 +1,16 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
+import { addItem } from '../utils/cartSlice';
+import { useNavigate } from 'react-router-dom';
 
 const AddToCartModal = ({ product, onClose,isOpen }) => {
   const { name, description, image, discountedPrice } = product;
   const selectedProductId = useSelector((state) => state.cart.selectedProductId);
   
-
+const navigate=useNavigate();
   const handleConfirm = () => {
     // Replace with your actual logic to add the product to the cart
+    navigate('/thank-you')
     console.log(`Adding ${name} to cart`);
     
   };
@@ -19,7 +22,7 @@ const AddToCartModal = ({ product, onClose,isOpen }) => {
     <div className="modal" style={{ display: selectedProductId ? 'block' : 'none' }}>
       <div className="modal-content">
         <div className="modal-header">
-          <h2>Add to Cart</h2>
+          <h2>Added to Cart</h2>
           <button onClick={onClose}>&times;</button>
         </div>
         {selectedProductId === product.id && ( // Conditionally render content

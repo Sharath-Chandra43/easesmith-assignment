@@ -3,7 +3,7 @@ import { FaRegHeart } from 'react-icons/fa';
 import AddToCartModal from './AddToCartModal';
 import { useNavigate } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
-import { openAddToCartModal } from '../utils/cartSlice';
+import { addItem, openAddToCartModal } from '../utils/cartSlice';
 
 const ProductCard = ({product,index}) => {
   const {name,description,image,rating,totalPrice,discountedPrice,id}=product;
@@ -11,8 +11,11 @@ const ProductCard = ({product,index}) => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
+
+
   const handleAddToCart = () => {
     dispatch(openAddToCartModal(id));
+    dispatch(addItem(product))
      // Dispatch action with product ID
      setShowModal(true);
   };

@@ -3,8 +3,10 @@ import { LOGO } from '../utils/constants'
 import { AiOutlineUser } from "react-icons/ai";
 import { HiOutlineShoppingCart } from 'react-icons/hi';
 import { IoIosArrowDown } from 'react-icons/io';
+import { useSelector } from 'react-redux';
 
 const Header = () => {
+  const cartItems = useSelector((state) => state.cart.items);
   return (
     <>    
     <div className='main-container'>    
@@ -41,10 +43,14 @@ const Header = () => {
                 <AiOutlineUser className='icons-size' />
                 My-Profile
               </span>
-              <span className='cart cart-length-update' data-cart-length="3">
-            <HiOutlineShoppingCart className='icons-size'/>
-                Cart
+              
+              <span className='cart cart-length-update'>
+            <HiOutlineShoppingCart className='icons-size cart-length-update'/>
+            
+                Cart {cartItems.length}
+                
               </span>
+              
         </div>
     </div>
     </div>
