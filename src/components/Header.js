@@ -4,6 +4,7 @@ import { AiOutlineUser } from "react-icons/ai";
 import { HiOutlineShoppingCart } from 'react-icons/hi';
 import { IoIosArrowDown } from 'react-icons/io';
 import { useSelector } from 'react-redux';
+import { Link } from 'react-router-dom';
 
 const Header = () => {
   const cartItems = useSelector((state) => state.cart.items);
@@ -26,7 +27,9 @@ const Header = () => {
         </div>
         <div>
         <ul className='nav-container'>
+          <Link to='/'>
             <li >Home</li>
+          </Link>
             <li>Plants & Pots</li>
             <li>Tools <IoIosArrowDown  /></li>
             <li>Our Services <IoIosArrowDown /></li>

@@ -11,11 +11,14 @@ const cartSlice=createSlice({
         addItem:(state,action)=>{
             state.items.push(action.payload)
         },
-        openAddToCartModal: (state, action) => {
+        viewProduct:(state,action)=>{
+            state.items.push(action.payload)
+        },
+        setSelectedProductId: (state, action) => {
             state.selectedProductId = action.payload; // Set selected product ID
           },
     }
 })
 
-export const {addItem,openAddToCartModal}=cartSlice.actions;
+export const {addItem,setSelectedProductId,viewProduct}=cartSlice.actions;
 export default cartSlice.reducer;

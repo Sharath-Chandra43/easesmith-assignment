@@ -89,14 +89,12 @@ const Home = () => {
            <div className='proudcts'>
               <p>300 proudcts</p>
               <button className='buttons'>Sort By <IoIosArrowDown /> </button>
-           </div>
-           <div className='Products-main'> 
-           {mockData.map((product) => (
-            <ProductCard key={product.id} product={product} />
-            ))}
-           </div>
-           <div>
-              
+          
+            </div>
+            <div>
+               <Pagination />
+            </div>
+            <div>      
            </div>
         </div>
 

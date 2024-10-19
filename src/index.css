@@ -601,3 +601,111 @@ margin-bottom: 0.25rem;
 .text-black{
   color:black;
 }
+
+
+.thankyou-page{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 140px;
+}
+
+.cart-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  margin-top: 44px;
+}
+
+.thankyou-message{
+  font-weight: bold;
+  font-size: 24px;
+
+}
+
+.cart-text{
+  text-align: center;
+  font-weight:500;
+}
+
+hr {
+  display: block;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  margin-left: auto;
+  margin-right: auto;
+  border-style: inset;
+  border-width: 1px;
+}
+
+.congrats-text{
+font-family: Poppins;
+font-size: 24px;
+font-weight: 600;
+line-height: 36px;
+text-align: center;
+color:  #165315;
+
+}
+
+.cart{
+  display: flex;
+  flex-direction: column;
+}
+
+.chaperone-service-message{
+  font-family: Poppins;
+font-size: 16px;
+font-weight: 400;
+line-height: 24px;
+text-align: center;
+color:#165315;
+}
+
+.cart-card{
+  width: 800px;
+  height: 400px;
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  background-color: #f0f0f0;
+}
+
+
+.pagination {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.pagination ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pagination li {
+  margin: 0 5px;
+}
+
+.pagination a {
+  width: 40px;
+  height: 18px;
+  display: block;
+  padding: 5px 10px;
+  border: 1px solid #ccc;
+  text-decoration: none;
+  font-size: 14px; 
+}
+
+.pagination .active a {
+  background-color: #333;
+  color: #fff;
+}
+
+.pagination .disabled a {
+  color: #ccc;
+  pointer-events: none;
+}
