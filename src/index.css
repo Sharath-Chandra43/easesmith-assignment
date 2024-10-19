@@ -532,3 +532,73 @@ margin-bottom: 0.25rem;
 .modal-footer button:hover {
   background-color: #038645;
 }
+
+.footer {
+  background-color: #f0ffe5;
+  padding: 20px 0;
+}
+
+.container {
+  max-width: 100%;
+  margin-left: 20px ;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 36px;
+}
+
+.footer-top{
+  padding:6px;
+}
+
+.footer-container{
+  grid-column: span 1;
+}
+
+.subscribe{
+  margin-bottom: 8px;
+}
+
+.subscribe-text{
+  font-weight: bold;
+}
+.subscribe-description{
+  font-size: 14px;
+  font-weight: 400;
+  color: #838383;
+}
+
+.subscribe-input{
+  width: 100%;
+  max-width: 268px;
+  padding: 12px;
+  padding-left: 16px;
+  background-color: white;
+  border-radius: 25px;
+}
+
+.subscribe-button{
+  margin-top: 10px;
+  border-radius:20px;
+  font-size: 12px;
+}
+
+.headings{
+  font-size: 20px;
+  
+  margin-top:8px;
+}
+
+.descriptions{
+  list-style-type: none;
+  padding: 0;
+  font-weight: 500;
+  color:#999999;
+}
+
+.Chaperone-info{
+  margin-left: 30px;
+}
+
+.text-black{
+  color:black;
+}

@@ -5,6 +5,7 @@ import Pagination from './Pagination'
 import mockData from '../utils/mockData'
 import ProductCard from './ProductCard'
 import Header from './Header'
+import Footer from './Footer'
 
 
 const Home = () => {
@@ -97,8 +98,12 @@ const Home = () => {
            <div>
               
            </div>
-          </div>
         </div>
+
+        
+
+        </div>
+        <Footer /> 
         </div>
 </>
   )

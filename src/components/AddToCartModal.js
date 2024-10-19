@@ -3,13 +3,14 @@ import React from 'react';
 const AddToCartModal = ({ product, onClose,isOpen }) => {
   const { name, description, image, discountedPrice } = product;
 
-  if (!isOpen) return null;
   
+
   const handleConfirm = () => {
     // Replace with your actual logic to add the product to the cart
     console.log(`Adding ${name} to cart `);
     
   };
+  if (!isOpen) return null;
 
   return (
     <div className="modal">

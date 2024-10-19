@@ -60,7 +60,7 @@ const ProductCard = ({product,index}) => {
         </div>
         {showModal &&
         (
-          <AddToCartModal product={product}  key={`${index}-${product.id}`} isOpen={showModal} onConfirm={handleAddToCart} onClose={handleCloseModal} />
+          <AddToCartModal product={product}  key={`${product.id}`} isOpen={showModal} onConfirm={handleAddToCart} onClose={handleCloseModal} />
           )        
        }
       </div>
