@@ -78,3 +78,8 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 * as showed in figma disgned create cart 
 
 * type npm start in terminal to start the project 
+
+### bug
+The filter card the dicount banner and view proudct are not showing after deploying to vercel but in functionality its fine and when open browser controls its showing and in localhostl also its fine 
+
+im not much familiar with vercel.

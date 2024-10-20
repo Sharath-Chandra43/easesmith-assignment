@@ -26,6 +26,9 @@ body {
   .header {
     padding: 0 10px;
   }
+  .buttons{
+    display: block;
+  }
 }
 
 /* Logo container styles */
@@ -364,6 +367,8 @@ margin-right: 170px;
   width: 100%;
   
 }
+
+
 
 .proudcts{
   display: flex;
