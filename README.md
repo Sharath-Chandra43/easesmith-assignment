@@ -77,3 +77,4 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 
 * as showed in figma disgned create cart 
 
+* type npm start in terminal to start the project 
