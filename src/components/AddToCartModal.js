@@ -8,6 +8,7 @@ const AddToCartModal = ({ product, onClose,isOpen }) => {
   
    const navigate=useNavigate()
   const dispatch=useDispatch()
+  
   const handleConfirm = () => {
    navigate('/cart')
    dispatch(addItem(product)) 

@@ -21,7 +21,6 @@ const ProductCard = ({ product, index }) => {
   const navigate = useNavigate();
 
   const handleAddToCart = () => {
-    dispatch(addItem(product));
     dispatch(setSelectedProductId(id));
     setShowModal(true);
   };
