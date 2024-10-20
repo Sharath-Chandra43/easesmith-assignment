@@ -35,21 +35,21 @@ export default function Pagination() {
         <div className="pagination">
           <ul>
             <li className={currentPage === 1 ? 'disabled' : ''}>
-              <a href="#" onClick={() => handlePageChange(currentPage - 1)} disabled={currentPage === 1}>
+              <button className='page-number' onClick={() => handlePageChange(currentPage - 1)} disabled={currentPage === 1}>
                 Previous
-              </a>
+              </button>
             </li>
             {Array.from({ length: totalPages }).map((_, index) => (
               <li key={index + 1} className={currentPage === index + 1 ? 'active' : ''}>
-                <a href="#" onClick={() => handlePageChange(index + 1)}>
+                <button className='page-number' onClick={() => handlePageChange(index + 1)}>
                   {index + 1}
-                </a>
+                </button>
               </li>
             ))}
             <li className={currentPage === totalPages ? 'disabled' : ''}>
-              <a href="#" onClick={() => handlePageChange(currentPage + 1)} disabled={currentPage === totalPages}>
+              <button className='page-number' onClick={() => handlePageChange(currentPage + 1)} disabled={currentPage === totalPages}>
                 Next
-              </a>
+              </button>
             </li>
           </ul>
         </div>

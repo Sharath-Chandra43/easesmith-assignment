@@ -1,5 +1,5 @@
 import React from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { addItem } from '../utils/cartSlice';
 import { useNavigate } from 'react-router-dom';
 
@@ -8,7 +8,7 @@ const AddToCartModal = ({ product, onClose,isOpen }) => {
   
    const navigate=useNavigate()
   const dispatch=useDispatch()
-  
+
   const handleConfirm = () => {
    navigate('/cart')
    dispatch(addItem(product)) 

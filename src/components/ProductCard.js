@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { FaRegHeart } from 'react-icons/fa';
 import AddToCartModal from './AddToCartModal';
 import { useNavigate } from 'react-router-dom';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { addItem, setSelectedProductId } from '../utils/cartSlice';
 
 const ProductCard = ({ product, index }) => {
@@ -32,6 +32,7 @@ const ProductCard = ({ product, index }) => {
   const handleViewProduct = () => {
     navigate('/thank-you');
     dispatch(addItem(product))
+    dispatch(setSelectedProductId(id));
   };
 
   return (

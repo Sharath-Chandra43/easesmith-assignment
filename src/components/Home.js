@@ -2,8 +2,6 @@ import React from 'react'
 import SimpleSlider from './SimpleSlider'
 import { IoIosArrowDown } from 'react-icons/io'
 import Pagination from './Pagination'
-import mockData from '../utils/mockData'
-import ProductCard from './ProductCard'
 import Header from './Header'
 import Footer from './Footer'
 
@@ -40,48 +38,58 @@ const Home = () => {
             <div className='filter-row'>
               <h1 className='filter-texts'>Filter</h1>
               <button className='fliter-texts button'> Clear All</button>
-              <br className='break'/>
            </div>
+           <hr className="horizontal" />
            <div className='filter-row'>
               <h1 className='filter-texts'>Type of Plants</h1>
               <button className='fliter-texts button'> +</button> 
            </div>
+           <hr className="horizontal" />
            <div className='filter-row'>
               <h1 className='filter-texts'>Nursery</h1>
-              <button className='fliter-texts button'> +</button>  
+              <button className='fliter-texts button'> +</button> 
            </div>
+           <hr className="horizontal" />
            <div className='filter-row'>
               <h1 className='filter-texts'>Ideal Plants Location</h1>
               <button className='fliter-texts button'> +</button>  
            </div>
+           <hr className="horizontal" />
            <div className='filter-row'>
               <h1 className='filter-texts'>Indoor/ Outdoor</h1>
               <button className='fliter-texts button'> +</button>  
            </div>
+           <hr className="horizontal" />
            <div className='filter-row'>
               <h1 className='filter-texts'>Maintenance</h1>
               <button className='fliter-texts button'> +</button>  
            </div>
+           <hr className="horizontal" />
            <div className='filter-row'>
               <h1 className='filter-texts'>Plant Size</h1>
               <button className='fliter-texts button'> +</button>  
            </div>
+           <hr className="horizontal" />
            <div className='filter-row'>
               <h1 className='filter-texts'>Water Schedule</h1>
               <button className='fliter-texts button'> +</button>  
            </div>
+           <hr className="horizontal" />
            <div className='filter-row'>
               <h1 className='filter-texts'>Color</h1>
               <button className='fliter-texts button'> +</button>  
            </div>
+           <hr className="horizontal" />
            <div className='filter-row'>
               <h1 className='filter-texts'>Seasonal</h1>
               <button className='fliter-texts button'> +</button>  
            </div>
+           <hr className="horizontal" />
            <div className='filter-row'>
               <h1 className='filter-texts'>Light Efficient</h1>
               <button className='fliter-texts button'> +</button>  
            </div>
+           <hr className="horizontal" />
          
            
           </div>
