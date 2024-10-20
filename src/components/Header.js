@@ -47,13 +47,16 @@ const Header = () => {
                 My-Profile
               </span>
               
+              
+              <Link  to='/cart'>
+              
               <span className='cart cart-length-update'>
             <HiOutlineShoppingCart className='icons-size cart-length-update'/>
             
                 Cart {cartItems.length}
                 
               </span>
-              
+             </Link>
         </div>
     </div>
     </div>
