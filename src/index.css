@@ -822,3 +822,15 @@ color:#165315;
 .page-number{
   cursor: pointer;
 }
+
+.thankyou{
+  width: 50%;
+  margin-left: 90px;
+}
+
+.thanyou-card{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 200px;
+}
