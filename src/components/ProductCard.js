@@ -3,7 +3,7 @@ import { FaRegHeart } from 'react-icons/fa';
 import AddToCartModal from './AddToCartModal';
 import { useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
-import { addItem,  setSelectedProductId, } from '../utils/cartSlice';
+import { addItem, setSelectedProductId } from '../utils/cartSlice';
 
 const ProductCard = ({ product, index }) => {
   const {
@@ -16,7 +16,6 @@ const ProductCard = ({ product, index }) => {
     id,
   } = product;
   const [showModal, setShowModal] = useState(false);
-  
 
   const dispatch = useDispatch();
   const navigate = useNavigate();
@@ -31,21 +30,19 @@ const ProductCard = ({ product, index }) => {
     setShowModal(false);
   };
 
-  
-const handleViewProduct = () => {
-  dispatch(setSelectedProductId(id));
-  dispatch(addItem(product))
-  navigate('/thank-you',)
-};
+  const handleViewProduct = () => {
+    navigate('/thank-you');
+    dispatch(addItem(product))
+  };
 
   return (
-    <div className="proudct-container">
+    <div className="product-container">
       <div className="product-image-container">
         <img src={image} alt="product-image" className="product-image" />
         <button className="heart-button">
           <FaRegHeart size={22} />
         </button>
-        <button className="buttons view"  onClick={handleViewProduct}>
+        <button className="buttons view" onClick={handleViewProduct}>
           View product
         </button>
       </div>
@@ -67,14 +64,12 @@ const handleViewProduct = () => {
         </button>
         <button className="but-on-rent">Buy on Rent</button>
       </div>
-      {showModal && (
-        <AddToCartModal
-          product={product}
-          key={id} // Ensure unique key based on product ID
-          isOpen={showModal}
-          onClose={handleCloseModal}
-        />
-      )}
+      <AddToCartModal
+        product={product}
+        key={id} // Ensure unique key based on product ID
+        isOpen={showModal}
+        onClose={handleCloseModal}
+      />
     </div>
   );
 };

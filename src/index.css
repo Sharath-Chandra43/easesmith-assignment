@@ -709,3 +709,22 @@ color:#165315;
   color: #ccc;
   pointer-events: none;
 }
+
+.modal-image{
+  width:90px;
+  height: 90px;
+}
+
+.modal-name{
+  font-family:Poppins;
+  font-style: 18px;
+}
+
+.modal-description{
+  color: gray;
+  font-family: Inter;
+}
+
+.modal-price{
+  color: green;
+}
